@@ -3,11 +3,13 @@ import csv
 
 
 class Writer(object):
-    def csv_read (data):
-        with open("data.csv", 'a') as file:
-            writer = csv.writer(file)
-            writer.writerow((data['head'], data['link']))
-    pass
+    def csv_writer (data, path):
+        with open("resultpars.csv", 'a') as csv_file:
+            writer = csv.writer(csv_file)
+            writer.writerow((data['div'],
+                             data['meta'],
+                             data['link']))
+        path = "resultpars.csv"
+        data.csv_writer(data)
 
 
-Writer
